@@ -8,11 +8,15 @@ registerLocaleData(localePt);
 
 import { ToDoListComponent } from './to-do-list/to-do-list.component';
 import { registerLocaleData } from '@angular/common';
+import { CepPipe } from './cep.pipe';
+import { CpfPipe } from './cpf.pipe';
 
 @NgModule({
   declarations: [
     AppComponent,
     ToDoListComponent,
+    CepPipe,
+    CpfPipe
 
   ],
   imports: [

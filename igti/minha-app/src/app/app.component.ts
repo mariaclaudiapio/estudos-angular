@@ -10,4 +10,6 @@ export class AppComponent {
   text = 'Uma mensagem qualquer'
   n = 12050.4983
   hoje = new Date()
+  meuCep = '33136016'
+  meuCpf = '12345678901'
 }
