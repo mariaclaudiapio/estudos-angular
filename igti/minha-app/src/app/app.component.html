@@ -1,4 +1,4 @@
-<!-- <app-to-do-list></app-to-do-list> -->
+<!-- <app-to-do-list></app-to-do-list>
 
 <h3>Pipes</h3>
 <h3>Texto: {{ text }}</h3>
@@ -12,4 +12,12 @@
 <p>Hoje (formatado2) é {{ hoje | date:'short' }}.</p>
 <p>Hoje (formatado3) é {{ hoje | date:'dd/MM/YYYY' }}.</p>
 <p>CEP: {{ meuCep | cep }}.</p>
-<p>CPF: {{ meuCpf | cpf }}.</p>
+<p>CPF: {{ meuCpf | cpf }}.</p> -->
+
+<h3>Serviços</h3>
+<div *ngFor="let item of todoListService.items">
+  {{item}}
+</div>
+<button (click)="todoListService.add('JavaScript')">Adicionar </button>
+
+<app-c2></app-c2>

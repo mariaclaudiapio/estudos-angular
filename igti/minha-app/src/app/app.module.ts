@@ -10,20 +10,23 @@ import { ToDoListComponent } from './to-do-list/to-do-list.component';
 import { registerLocaleData } from '@angular/common';
 import { CepPipe } from './cep.pipe';
 import { CpfPipe } from './cpf.pipe';
+import { C2Component } from './c2/c2.component';
+import { TodoListService } from './todoList.service';
 
 @NgModule({
   declarations: [
     AppComponent,
     ToDoListComponent,
     CepPipe,
-    CpfPipe
+    CpfPipe,
+    C2Component
 
   ],
   imports: [
     BrowserModule,
     FormsModule
   ],
-  providers: [{provide: LOCALE_ID, useValue: 'pt'}],
+  providers: [{provide: LOCALE_ID, useValue: 'pt'}, TodoListService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
