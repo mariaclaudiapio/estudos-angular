@@ -4,6 +4,7 @@ import { AppComponent } from './app.component';
 import { FormsModule } from '@angular/forms';
 import localePt from '@angular/common/locales/pt';
 registerLocaleData(localePt);
+import { ReactiveFormsModule } from '@angular/forms';
 
 
 import { ToDoListComponent } from './to-do-list/to-do-list.component';
@@ -24,7 +25,8 @@ import { TodoListService } from './todoList.service';
   ],
   imports: [
     BrowserModule,
-    FormsModule
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [{provide: LOCALE_ID, useValue: 'pt'}, TodoListService],
   bootstrap: [AppComponent]

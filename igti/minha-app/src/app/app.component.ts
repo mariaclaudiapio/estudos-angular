@@ -1,5 +1,7 @@
-import { TodoListService } from './todoList.service';
+// import { TodoListService } from './todoList.service';
 import { Component } from '@angular/core';
+import { FormControl, FormGroup } from '@angular/forms';
+import { Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-root',
@@ -14,10 +16,20 @@ export class AppComponent {
   // meuCep = '33136016'
   // meuCpf = '12345678901'
 
-  todoListService: TodoListService
+  // todoListService: TodoListService
 
-  constructor(todoListService: TodoListService) {
-    this.todoListService = todoListService
+  // constructor(todoListService: TodoListService) {
+  //   this.todoListService = todoListService
+  // }
+
+  myForm = new FormGroup({
+    name: new FormControl('', Validators.required),
+    address: new FormControl('')
+  })
+
+  onSubmit() {
+    console.log(this.myForm.value)
   }
+
   }
 
